@@ -1,0 +1,4 @@
+FROM openjdk:11-jre-slim
+COPY target/sringbootapp.jar springbootapp.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "/springbootapp.jar"]
