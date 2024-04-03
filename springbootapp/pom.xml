@@ -38,8 +38,20 @@
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>           
+            <artifactId>maven-compiler-plugin</artifactId> 		
         </plugin>
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-jar-plugin</artifactId>
+			
+		<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.example.springbootapp.SpringbootappApplication</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
     </plugins>
     <finalName>springbootapp</finalName>
 	</build>
