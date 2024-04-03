@@ -1,4 +1,14 @@
+# Use the official OpenJDK 11 image as base
 FROM openjdk:11-jre-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the Spring Boot application JAR file from the Jenkins workspace into the container
+COPY target/springbootapp.jar /app/springbootapp.jar
+
+# Expose the port your application listens on
 EXPOSE 8080
-ADD target/springbootapp.jar springbootapp.jar
-ENTRYPOINT ["java", "-jar", "target/springbootapp.jar"]
+
+# Specify the command to run your application
+CMD ["java", "-jar", "springbootapp.jar"]
