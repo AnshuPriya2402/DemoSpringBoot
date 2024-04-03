@@ -5,7 +5,7 @@ FROM openjdk:11
 WORKDIR /app
 
 # Copy the Spring Boot application JAR file from the Jenkins workspace into the container
-COPY target/springbootapp.jar /app/springbootapp.jar
+COPY target/springbootapp.jar /app/
 
 # Expose the port your application listens on
 EXPOSE 8080
