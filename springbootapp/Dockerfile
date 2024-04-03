@@ -11,4 +11,4 @@ COPY target/springbootapp.jar /app/springbootapp.jar
 EXPOSE 8080
 
 # Specify the command to run your application
-CMD ["java", "-jar", "springbootapp.jar"]
+ENTRYPOINT ["java", "-jar", "springbootapp.jar"]
